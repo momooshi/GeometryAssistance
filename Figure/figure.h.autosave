@@ -3,33 +3,16 @@
 
 class Figure
 {
-protected:
-    double *side, *angle; //значения сторон и углов лучше задать массивом, ибо у разных фигур их разное количество
+ protected:
     double perimeter, square;
-public:
-    //Figure();
-    Figure (double *s_side = 0, double *s_angle = 0, double s_perimeter = 0, double s_square = 0 ):
-        side (s_side), angle (s_angle), perimeter (s_perimeter), square (s_square) {}
-
-
-    virtual void set_sides(double &sides) = 0;
-    virtual void set_angles (double &angles) = 0;
-    virtual void set_perimeter (double perimeter) = 0;
-    virtual void set_square (double square) = 0;
-
-    virtual double & get_sides() = 0;
-    virtual double & get_angles() = 0;
+ public:
+    Figure () { }
+    virtual double count_perimeter() = 0;
+    virtual double count_square () = 0;
     virtual double  get_perimeter() = 0;
     virtual double  get_square() = 0;
-
-    virtual void count_perimeter(double &sides) = 0;
-    virtual void count_square () = 0;
-
-    ~Figure()
-    {
-        delete [] side;
-        delete [] angle;
-    }
+    virtual void show_figure () = 0;
+    ~Figure() { }
 };
 
 #endif // FIGURE_H
