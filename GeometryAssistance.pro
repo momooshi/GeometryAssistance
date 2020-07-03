@@ -4,4 +4,5 @@ SUBDIRS += \
     Demo \
     Figure \
     FiguresList \
-    Round
+    Round \
+    quadra
