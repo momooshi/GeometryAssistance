@@ -23,3 +23,8 @@ void TriangleCreation::on_pushButton_2_clicked()
 {
     ui->statusbar->showMessage("Сохранено");
 }
+
+void TriangleCreation::on_radline_textChanged(const QString &arg1)
+{
+
+}
