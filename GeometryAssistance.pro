@@ -1,8 +1,9 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
+    FigureCreation \
     Demo \
     Figure \
     FiguresList \
-    Round \
-    quadra
+    Quadra
+CONFIG+= ordered

@@ -17,13 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    quadra.cpp
+    Parallelogram.cpp \
+    Trapezoid.cpp
 
 HEADERS += \
-    quadra.h
+    Parallelogram.h \
+    Trapezoid.h
 
 TRANSLATIONS += \
-    quadra_ru_RU.ts
+    Quadra_ru_RU.ts
 
 # Default rules for deployment.
 unix {
