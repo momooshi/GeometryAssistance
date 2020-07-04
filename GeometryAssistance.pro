@@ -5,5 +5,6 @@ SUBDIRS += \
     Demo \
     Figure \
     FiguresList \
+    LibraryTriangle \
     Round
 CONFIG+= ordered
