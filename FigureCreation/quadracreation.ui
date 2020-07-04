@@ -68,7 +68,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="side1"/>
+      <widget class="QLineEdit" name="radline"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="perim">
@@ -78,7 +78,7 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="side2"/>
+      <widget class="QLineEdit" name="perimline"/>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="square">
@@ -90,15 +90,12 @@
      <item row="2" column="1">
       <widget class="QLineEdit" name="lineEdit"/>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_9">
+     <item row="4" column="0">
+      <widget class="QLabel" name="label">
        <property name="text">
-        <string>Сторона 4</string>
+        <string>Угол 1</string>
        </property>
       </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEdit_5"/>
      </item>
      <item row="4" column="1">
       <widget class="QLineEdit" name="lineEdit_2"/>
@@ -123,27 +120,10 @@
      <item row="6" column="1">
       <widget class="QLineEdit" name="lineEdit_4"/>
      </item>
-     <item row="7" column="0">
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>Угол 4</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QLineEdit" name="lineEdit_6"/>
-     </item>
      <item row="8" column="0">
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>Периметр</string>
-       </property>
-      </widget>
-     </item>
-     <item row="8" column="1">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string/>
        </property>
       </widget>
      </item>
@@ -154,6 +134,13 @@
        </property>
       </widget>
      </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
      <item row="9" column="1">
       <widget class="QLabel" name="label_7">
        <property name="text">
@@ -161,12 +148,25 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label">
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_8">
        <property name="text">
-        <string>Угол 1</string>
+        <string>Угол 4</string>
        </property>
       </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Сторона 4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEdit_5"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="lineEdit_6"/>
      </item>
     </layout>
    </widget>

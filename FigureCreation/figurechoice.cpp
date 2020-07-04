@@ -9,7 +9,6 @@ FigureChoice::FigureChoice(QWidget *parent) :
     creationwindowr = new CreateRound(this);
     creationwindow_t = new TriangleCreation(this);
     creationwindow_q = new QuadraCreation(this);
-
     connect (creationwindowr, &CreateRound::Return, this, &FigureChoice::show);
     connect (creationwindow_t, &TriangleCreation::Return, this, &FigureChoice::show);
     connect (creationwindow_q, &QuadraCreation::Return, this, &FigureChoice::show);
@@ -35,7 +34,7 @@ void FigureChoice::on_pushButton_2_clicked()
 void FigureChoice::on_pushButton_4_clicked()
 {
     close();
-    creationwindow_q->show();
+    creationwindow_t->show();
 }
 
 void FigureChoice::on_pushButton_3_clicked()

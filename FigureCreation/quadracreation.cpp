@@ -23,4 +23,3 @@ void QuadraCreation::on_pushButton_2_clicked()
 {
     ui->statusbar->showMessage("Сохранено");
 }
-
