@@ -5,7 +5,7 @@ SUBDIRS += \
     Demo \
     Figure \
     FiguresList \
-    Quadra
     LibraryTriangle \
-    Round
+    Round \
+    Quadra
 CONFIG+= ordered
