@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    FiguresList list;
+    //FiguresList list;
     w.show();
     return a.exec();
 }

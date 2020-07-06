@@ -1,6 +1,6 @@
 #ifndef LIBRARYTRIANGLE_H
 #define LIBRARYTRIANGLE_H
-#include  "figure.h "
+#include  "../Figure/figure.h "
 #include  <math.h>
 
 class Triangle : public Figure

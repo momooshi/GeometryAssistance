@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <math.h>
-#include "figure.h"
+#include "../Figure/figure.h"
 
 class Trapezoid : public Figure
 {
