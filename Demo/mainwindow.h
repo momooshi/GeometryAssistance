@@ -21,6 +21,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     FigureChoice *window;
-   // CreateRound *round_create;
+
 };
 #endif // MAINWINDOW_H
