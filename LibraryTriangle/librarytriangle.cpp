@@ -1,13 +1,13 @@
 #include "librarytriangle.h"
 
-LibraryTriangle::LibraryTriangle(double side1, double side2, double side3, double angle1, double angle2, double angle3)
+LibraryTriangle::LibraryTriangle()
 {
-    this->side1=side1;
-    this->side2=side2;
-    this->side3=side3;
-    this->angle1=angle1;
-    this->angle2=angle2;
-    this->angle3=angle3;
+    side1=0;
+    side2=0;
+    side3=0;
+    angle1=0;
+    angle2=0;
+    angle3=0;
 }
 
 void LibraryTriangle::set_side(double s_side1, double s_side2, double s_side3)
@@ -81,12 +81,4 @@ double LibraryTriangle::count_perimeter()
 {
     perimeter=side1+side2+side3;
     return perimeter;
-}
-
-void LibraryTriangle:: show()
-{
-    std::cout << "\nSide of the triangle: " << side1 << side2 << side3 << std::endl;
-    std::cout <<  "\nTriangle angles: " << angle1 << angle2 << angle3 << std::endl;
-    std::cout << "\nTriangle perimeter: " << perimeter << std::endl;
-   std:: cout << "\nArea of a triangle: " << square << std::endl;
 }
