@@ -7,6 +7,7 @@ class Round : public Figure
 {
     double rad;
     const int angle = 360;
+
 public:
     double count_perimeter()
     {
@@ -21,6 +22,7 @@ public:
     {
         perimeter = count_perimeter();
         square = count_square();
+        name = "Круг";
     }
     double get_perimeter() { return perimeter; }
     double get_square() { return square; }
@@ -33,8 +35,9 @@ public:
     {
         perimeter = (2 * atan(1) * 4 * rad);
     }
-    friend QTextStream &operator<<(QTextStream &out, const Round &r);
-     ~Round() {}
+
+    QString get_name () { return name; }
+    ~Round() {}
 };
 
 #endif // ROUND_H
