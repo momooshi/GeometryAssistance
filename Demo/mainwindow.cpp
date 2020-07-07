@@ -9,7 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     window = new FigureChoice(this);
     connect (window, &FigureChoice::Return, this, &MainWindow::show);
-}
+
+    show_list = new FigureShow(this);
+ }
 
 MainWindow::~MainWindow()
 {
@@ -19,7 +21,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    close();
+    hide();
 
     window->show();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    hide();
+    show_list->show();
 }
