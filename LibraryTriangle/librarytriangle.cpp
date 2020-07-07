@@ -30,6 +30,57 @@ double LibraryTriangle::get_angle1() {return angle1;}
 double LibraryTriangle::get_angle2() {return angle2;}
 double LibraryTriangle::get_angle3() {return angle3;}
 
+double LibraryTriangle::third_party_search()
+{
+    side1=sqrt(side2*side2+side3*side3-2*side2*side3*cos(angle2));
+    return side1;
+}
+
+double LibraryTriangle::count_third_angle()
+{
+    angle3=180-angle1-angle2;
+    return angle3;
+}
+
+double LibraryTriangle::count_angles_cos()
+{
+    angle1=acos((side2*side2+side3*side3-side1*side1)/2*side2*side3);
+    angle2=acos((side1*side1+side3*side3-side2*side2)/2*side1*side2);
+    angle3=acos((side1*side1+side2*side2-side3*side3)/2*side1*side3);
+    return angle1;
+    return angle2;
+    return angle3;
+}
+
+double LibraryTriangle::count_on_2angle_1side()
+{
+    angle1=180-(angle2+angle3);
+    side2=side1*(sin(angle2)/sin(angle1));
+    side3=side1*(sin(angle3)/sin(angle1));
+    return side2;
+    return side3;
+}
+
+double LibraryTriangle::count_on_1angle_2side()
+{
+    side3=sqrt(side1*side1+side2*side2-2*side1*side2*cos(angle3));
+    angle1=acos((side2*side2+side3*side3-side1*side1)/2*side2*side3);
+    angle2=acos((side1*side1+side3*side3-side2*side2)/2*side1*side3);
+    return side3;
+}
+
+double LibraryTriangle::count_3angle_on_3side()
+{
+    if ((side1<(side2+side3))||(side2<(side1+side3))||(side3<(side1+side2)))
+    {
+        angle1=acos((side2*side2+side3*side3-side1*side1)/2*side2*side3);
+        angle2=acos((side1*side1+side3*side3-side2*side2)/2*side1*side3);
+        angle3=180-(angle1+angle2);
+    }
+    else std::cout<<"This is not a triangle"<<std::endl;
+    return 0;
+}
+
 double LibraryTriangle::count_square()
 {
     double half_perimeter;
@@ -49,5 +100,5 @@ void LibraryTriangle:: show()
     std::cout << "\nSide of the triangle: " << side1 << side2 << side3 << std::endl;
     std::cout <<  "\nTriangle angles: " << angle1 << angle2 << angle3 << std::endl;
     std::cout << "\nTriangle perimeter: " << perimeter << std::endl;
-   std:: cout << "\nArea of a triangle: " << square << std::endl;
+    std:: cout << "\nArea of a triangle: " << square << std::endl;
 }
