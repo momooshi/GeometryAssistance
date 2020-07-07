@@ -14,7 +14,7 @@ class FigureChoice : public QDialog
     Q_OBJECT
 
 public:
-    explicit FigureChoice(QWidget *parent = nullptr);
+    explicit FigureChoice(QWidget *parent = nullptr, FiguresList *t_list = nullptr);
     ~FigureChoice();
 
 signals:
@@ -37,6 +37,7 @@ private:
     CreateRound *creationwindowr;
     TriangleCreation *creationwindow_t;
     QuadraCreation *creationwindow_q;
+    FiguresList *list;
 };
 
 #endif // FIGURECHOICE_H

@@ -1,13 +1,13 @@
 #ifndef FIGURESLIST_H
 #define FIGURESLIST_H
 #include "../Figure/figure.h"
-#include <list>
+#include <QVector>
 
 class FiguresList
 
 {
   private:
-    std::list <Figure*> figures;
+    QVector <Figure*> figures;
 public:
     FiguresList();
     void show_list();
@@ -17,6 +17,10 @@ public:
     void del_element();
     void search_element();
     void add_element(Figure* figure) { figures.push_back(figure); }
+    double get_size() { return figures.size(); }
+
+    Figure* get_element(int i) {return figures.at(i);}
+    Figure* operator[](int i) { return figures[i]; }
 
 };
 

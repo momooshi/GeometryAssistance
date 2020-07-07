@@ -1,8 +1,8 @@
 #include "createround.h"
 #include "ui_createround.h"
 
-CreateRound::CreateRound(QWidget *parent) :
-    QMainWindow(parent),
+CreateRound::CreateRound(QWidget *parent, FiguresList *t_list) :
+    QMainWindow(parent), list(t_list),
     ui(new Ui::CreateRound)
 {
     ui->setupUi(this);
@@ -25,14 +25,13 @@ void CreateRound::on_pushButton_clicked()
 void CreateRound::on_pushButton_2_clicked()
 {
 
-    file.open(QFile::WriteOnly | QFile::Text);
+    /*file.open(QFile::WriteOnly | QFile::Text);
     if (file.isOpen())
     ui->statusbar->showMessage("Сохранено");
-    // *text << round;
-    //*text << "Round";
     *text << (round->get_rad())<<" ";
     *text << (round->get_perimeter());
-    file.close();
+    file.close();*/
+    list->add_element(round);
 }
 
 void CreateRound::on_radline_textChanged(const QString &arg1)
