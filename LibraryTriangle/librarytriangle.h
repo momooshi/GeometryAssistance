@@ -19,19 +19,19 @@ class LibraryTriangle : public Figure
     void set_side(double s_side1, double s_side2, double s_side3);
     void set_angle (double a_angle1, double a_angle2, double a_angle3);
 
-    double get_side1();
-    double get_side2();
-    double get_side3();
-    double get_angle1();
-    double get_angle2();
-    double get_angle3();
+    double get_side1(){return side1;}
+    double get_side2(){return side2;}
+    double get_side3(){return side3;}
+    double get_angle1(){return angle1;}
+    double get_angle2(){return angle2;}
+    double get_angle3(){return angle3;}
 
     double count_perimeter();
     double count_square();
-    double third_party_search();
+    double count_side1_sidesangle();
     double count_third_angle();
-    double count_angles_cos();
-    double count_on_2angle_1side();
+    void count_angles_cos();
+    void count_on_2angle_1side();
     double count_on_1angle_2side();
     double count_3angle_on_3side();
 

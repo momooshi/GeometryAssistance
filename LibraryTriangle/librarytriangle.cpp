@@ -23,14 +23,7 @@ void LibraryTriangle::set_angle (double a_angle1, double a_angle2, double a_angl
     angle3=a_angle3;
 }
 
-double LibraryTriangle::get_side1() {return side1;}
-double LibraryTriangle::get_side2() {return side2;}
-double LibraryTriangle::get_side3() {return side3;}
-double LibraryTriangle::get_angle1() {return angle1;}
-double LibraryTriangle::get_angle2() {return angle2;}
-double LibraryTriangle::get_angle3() {return angle3;}
-
-double LibraryTriangle::third_party_search()
+double LibraryTriangle::count_side1_sidesangle()
 {
     side1=sqrt(side2*side2+side3*side3-2*side2*side3*cos(angle2));
     return side1;
@@ -42,23 +35,18 @@ double LibraryTriangle::count_third_angle()
     return angle3;
 }
 
-double LibraryTriangle::count_angles_cos()
+void LibraryTriangle::count_angles_cos()
 {
     angle1=acos((side2*side2+side3*side3-side1*side1)/2*side2*side3);
     angle2=acos((side1*side1+side3*side3-side2*side2)/2*side1*side2);
     angle3=acos((side1*side1+side2*side2-side3*side3)/2*side1*side3);
-    return angle1;
-    return angle2;
-    return angle3;
 }
 
-double LibraryTriangle::count_on_2angle_1side()
+void LibraryTriangle::count_on_2angle_1side()
 {
     angle1=180-(angle2+angle3);
     side2=side1*(sin(angle2)/sin(angle1));
     side3=side1*(sin(angle3)/sin(angle1));
-    return side2;
-    return side3;
 }
 
 double LibraryTriangle::count_on_1angle_2side()
@@ -100,5 +88,5 @@ void LibraryTriangle:: show()
     std::cout << "\nSide of the triangle: " << side1 << side2 << side3 << std::endl;
     std::cout <<  "\nTriangle angles: " << angle1 << angle2 << angle3 << std::endl;
     std::cout << "\nTriangle perimeter: " << perimeter << std::endl;
-    std:: cout << "\nArea of a triangle: " << square << std::endl;
+   std:: cout << "\nArea of a triangle: " << square << std::endl;
 }
