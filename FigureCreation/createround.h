@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "../Round/round.h"
+
+#include "../FiguresList/figureslist.h"
+#include "../FigureListShow/figureshow.h"
+
 #include <QDir>
 #include <QFile>
 namespace Ui {
@@ -14,7 +18,7 @@ class CreateRound : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit CreateRound(QWidget *parent = nullptr);
+    explicit CreateRound(QWidget *parent = nullptr, FiguresList *t_list = nullptr);
     ~CreateRound();
 signals:
     void Return();
@@ -31,6 +35,8 @@ private:
     Round *round;
     QFile file;
     QTextStream *text;
+    FiguresList *list;
+
   };
 
 #endif // CREATEROUND_H

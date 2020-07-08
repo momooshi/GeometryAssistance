@@ -1,7 +1,6 @@
 #ifndef ROUND_H
 #define ROUND_H
 #include "../Figure/figure.h"
-<<<<<<< HEAD
 #include <math.h>
 #include <QTextStream>
 class Round : public Figure
@@ -36,32 +35,6 @@ public:
     }
     friend QTextStream &operator<<(QTextStream &out, const Round &r);
      ~Round() {}
-=======
-#include <cmath>
-#include <math.h>
-#include <iostream>
-class Round : public Figure
-{
-    double rad, angle;
-public:
-    //seteri
-    void set_rad(double Myrad);
-    //geteri
-    double get_perimeter();
-    double get_square();
-    double get_rad();
-    double get_angle();
-    void show();
-    double perimeter()
-    {
-        return (2 * atan(1) * 4 * rad);
-    }
-    double square()
-    {
-        return (atan(1) * 4 * rad * rad);
-    }
->>>>>>> dff6dd07f53001827c445a252338ea71697f3fcb
-};
 
 #endif // ROUND_H
 
