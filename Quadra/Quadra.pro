@@ -18,10 +18,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Parallelogram.cpp \
+    Rrectangle.cpp \
     Trapezoid.cpp
 
 HEADERS += \
     Parallelogram.h \
+    Rrectangle.h \
     Trapezoid.h
 
 TRANSLATIONS += \
