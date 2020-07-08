@@ -3,8 +3,10 @@
 
 #include <QMainWindow>
 #include "../Round/round.h"
+
 #include "../FiguresList/figureslist.h"
 #include "../FigureListShow/figureshow.h"
+
 #include <QDir>
 #include <QFile>
 namespace Ui {
@@ -34,6 +36,7 @@ private:
     QFile file;
     QTextStream *text;
     FiguresList *list;
+
   };
 
 #endif // CREATEROUND_H

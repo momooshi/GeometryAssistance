@@ -1,6 +1,5 @@
 #include "librarytriangle.h"
 
-
 LibraryTriangle::LibraryTriangle()
 {
     side1=0;

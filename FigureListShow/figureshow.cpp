@@ -16,12 +16,10 @@ FigureShow::FigureShow(QWidget *parent, FiguresList *t_list) :
     }
 }
 
-
 FigureShow::~FigureShow()
 {
     delete ui;
 }
-
 
 void FigureShow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
 {

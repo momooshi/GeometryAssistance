@@ -1,10 +1,8 @@
 #ifndef LIBRARYTRIANGLE_H
 #define LIBRARYTRIANGLE_H
 #include  "../Figure/figure.h "
-
 #include  <cmath>
 #include <iostream>
-
 
 class Triangle : public Figure
 {
@@ -42,7 +40,6 @@ class Triangle : public Figure
     double get_angle2(){return angle2;}
     double get_angle3(){return angle3;}
 
-
     double count_perimeter();
     double count_square();
     double count_side1_sidesangle();
@@ -60,4 +57,5 @@ class Triangle : public Figure
     QString get_name() {return name;}
     ~LibraryTriangle();
 };
+
 #endif // LIBRARYTRIANGLE_H

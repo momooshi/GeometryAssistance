@@ -32,6 +32,7 @@ void CreateRound::on_pushButton_2_clicked()
     *text << (round->get_perimeter());
     file.close();*/
     list->add_element(round);
+
 }
 
 void CreateRound::on_radline_textChanged(const QString &arg1)

@@ -33,3 +33,4 @@ unix {
 FORMS += \
     figureshow.ui \
     showround.ui
+

@@ -5,6 +5,7 @@
 //#include "../FigureListShow/figureshow.h"
 //#include "../FiguresList/figureslist.h"
 
+#include "../FigureListShow/figureshow.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

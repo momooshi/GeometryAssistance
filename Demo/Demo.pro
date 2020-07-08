@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 LIBS += -L../FigureCreation/debug -lFigureCreation
 LIBS+= -L../FigureListShow/debug -lFigureListShow
 LIBS+= -L../FiguresList/debug -lFiguresList
+
 SOURCES += \
     main.cpp \
     mainwindow.cpp
