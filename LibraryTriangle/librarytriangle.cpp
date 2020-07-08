@@ -1,5 +1,6 @@
 #include "librarytriangle.h"
 
+
 LibraryTriangle::LibraryTriangle()
 {
     side1=0;
@@ -103,18 +104,4 @@ double LibraryTriangle::count_3angle_on_3side()
     else {return 666;}
 
     return 0;
-}
-
-double LibraryTriangle::count_square()
-{
-    double half_perimeter;
-    half_perimeter = (side1+side2+side3)/2;
-    square=sqrt(half_perimeter*(half_perimeter-side1)*(half_perimeter-side2)*(half_perimeter-side3));
-    return square;
-}
-
-double LibraryTriangle::count_perimeter()
-{
-    perimeter=side1+side2+side3;
-    return perimeter;
 }

@@ -1,18 +1,20 @@
 #ifndef LIBRARYTRIANGLE_H
 #define LIBRARYTRIANGLE_H
 #include  "../Figure/figure.h "
+
 #include  <cmath>
 #include <iostream>
 
-class LibraryTriangle : public Figure
+
+class Triangle : public Figure
 {
   private:
     double side1, side2, side3;
     double angle1, angle2, angle3;
 
   public:
-
-    LibraryTriangle();
+    double count_perimeter();
+    double count_square();
 
     LibraryTriangle (double t_side1, double t_side2, double t_side3): side1(t_side1), side2(t_side2), side3(t_side3)
     {
@@ -40,6 +42,7 @@ class LibraryTriangle : public Figure
     double get_angle2(){return angle2;}
     double get_angle3(){return angle3;}
 
+
     double count_perimeter();
     double count_square();
     double count_side1_sidesangle();
@@ -57,8 +60,4 @@ class LibraryTriangle : public Figure
     QString get_name() {return name;}
     ~LibraryTriangle();
 };
-
-
-
-
 #endif // LIBRARYTRIANGLE_H
