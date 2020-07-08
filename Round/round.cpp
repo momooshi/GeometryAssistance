@@ -1,11 +1,14 @@
 #include "round.h"
+Round::Round(double rad)
+{
+    rad=count_rad();
+    square=count_square();
+    perimeter = count_perimeter();
+}
 
-QTextStream &operator<<(QTextStream &out, const Round &r)
-{   out<<"Окружность";
-    out<<"Радиус "<<r.rad;
-    out<<"Радиус вычесленый через периметр"<<r.Rad;
-    out<<"Периметр (длина окружности) "<<r.perimeter;
-    out<<"Площадь "<<r.square;
-    out<<"Угол "<<r.angle;
-    return out;
+Round::Round()
+{
+    Round::perimeter = 0.0;
+    Round::square = 0.0;
+    Round::rad = 0.0;
 }

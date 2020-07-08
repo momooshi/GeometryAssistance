@@ -1,46 +1,54 @@
-    #ifndef ROUND_H
+#ifndef ROUND_H
 #define ROUND_H
 #include "../Figure/figure.h"
 #include <math.h>
+#include<iostream>
 #include <QTextStream>
 class Round : public Figure
 {
     double rad;
-    double Rad;
     const int angle = 360;
+
 public:
+
     double count_perimeter()
     {
         return (2 * atan(1) * 4 * rad);
     }
+
     double count_square()
     {
         return (atan(1) * 4 * rad * rad);
     }
 
-    Round (double s_rad = 0): rad (s_rad)
+    double count_rad()
     {
-        perimeter = count_perimeter();
-        square = count_square();
+        return(perimeter/(2 * atan(1) * 4));
     }
+
     double get_perimeter() { return perimeter; }
     double get_square() { return square; }
-
-    void set_rad(double myrad){ rad = myrad; }
     double get_rad(){ return rad; }
-    double get_Rad(){return Rad;}
-    double get_angle(){ return angle; }
+    int get_angle(){ return angle; }
 
-    void set_perimeter()
+    void set_rad(double myrad)
     {
-        perimeter = (2 * atan(1) * 4 * rad);
+        rad = myrad;
+        square=count_square();
+        perimeter = count_perimeter();
     }
-    void set_Rad()
+    void set_perimeter(double perimeter)
     {
-        rad=square/2* atan(1) * 4 ;
+        rad=count_rad();
+        square=count_square();
+        perimeter = count_perimeter();
     }
-    friend QTextStream &operator<<(QTextStream &out, const Round &r);
-     ~Round() {}
+
+    QString get_name () { return name; }
+
+    Round();
+    Round(double rad);
+    ~Round() {}
 };
 
 #endif // ROUND_H
