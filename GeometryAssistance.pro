@@ -1,13 +1,15 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
+    FiguresList \
+    FigureCreation \
+    FigureListShow \
     Demo \
     Figure \
     Round \
     Quadra \
-    LibraryTriangle \
-    FigureListShow \
-    FiguresList \
-    FigureCreation
+    LibraryTriangle
+
+
 
     CONFIG+= ordered
