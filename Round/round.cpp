@@ -1,4 +1,5 @@
 #include "round.h"
+
 Round::Round(double rad)
 {
     rad=count_rad();
@@ -12,3 +13,4 @@ Round::Round()
     Round::square = 0.0;
     Round::rad = 0.0;
 }
+
