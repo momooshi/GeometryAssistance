@@ -10,17 +10,52 @@ LibraryTriangle::LibraryTriangle()
     angle3=0;
 }
 
-void LibraryTriangle::set_side(double s_side1, double s_side2, double s_side3)
+void LibraryTriangle::set_side1(double a)
 {
-    side1=s_side1;
-    side2=s_side2;
-    side3=s_side3;
+   side1=a;
+   perimeter=count_perimeter();
+   square=count_square();
+   count_angles_cos();
 }
-void LibraryTriangle::set_angle (double a_angle1, double a_angle2, double a_angle3)
+
+void LibraryTriangle::set_side2(double a)
 {
-    angle1=a_angle1;
-    angle2=a_angle2;
-    angle3=a_angle3;
+   side2=a;
+   perimeter=count_perimeter();
+   square=count_square();
+   count_angles_cos();
+}
+
+void LibraryTriangle::set_side3(double a)
+{
+   side3=a;
+   perimeter=count_perimeter();
+   square=count_square();
+   count_angles_cos();
+}
+
+void LibraryTriangle::set_angle1(double b)
+{
+   angle1=b;
+   perimeter=count_perimeter();
+   square=count_square();
+   count_on_1angle_2side();
+}
+
+void LibraryTriangle::set_angle2(double b)
+{
+   angle2=b;
+   perimeter=count_perimeter();
+   square=count_square();
+   count_on_1angle_2side();
+}
+
+void LibraryTriangle::set_angle3(double b)
+{
+   angle3=b;
+   perimeter=count_perimeter();
+   square=count_square();
+   count_on_1angle_2side();
 }
 
 double LibraryTriangle::count_side1_sidesangle()
@@ -65,7 +100,8 @@ double LibraryTriangle::count_3angle_on_3side()
         angle2=acos((side1*side1+side3*side3-side2*side2)/2*side1*side3);
         angle3=180-(angle1+angle2);
     }
-    else std::cout<<"This is not a triangle"<<std::endl;
+    else {return 666;}
+
     return 0;
 }
 

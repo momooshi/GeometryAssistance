@@ -26,9 +26,12 @@ class LibraryTriangle : public Figure
         square=count_square();
     }
 
-    void set_side(double s_side1, double s_side2, double s_side3);
-    void set_angle (double a_angle1, double a_angle2, double a_angle3);
-
+    void set_side1(double a);
+    void set_side2(double a);
+    void set_side3(double a);
+    void set_angle1(double b);
+    void set_angle2(double b);
+    void set_angle3(double b);
 
     double get_side1(){return side1;}
     double get_side2(){return side2;}
@@ -46,6 +49,7 @@ class LibraryTriangle : public Figure
     double count_on_1angle_2side();
     double count_3angle_on_3side();
 
+
     double  get_perimeter(){return perimeter;}
     double  get_square(){return square;}
     void show_figure ();
@@ -53,6 +57,7 @@ class LibraryTriangle : public Figure
     QString get_name() {return name;}
     ~LibraryTriangle();
 };
+
 
 
 
