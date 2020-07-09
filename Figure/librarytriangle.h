@@ -10,15 +10,15 @@ class Triangle : public Figure
     double angle1, angle2, angle3;
 
   public:
-    double count_perimeter();
-    double count_square();
+    void count_perimeter();
+    void count_square();
 
 
     Triangle(double s_side1 = 0, double s_side2 = 0, double s_side3 = 0, double s_angle1 = 0, double s_angle2 = 0, double s_angle3 = 0):
         side1(s_side1), side2(s_side2), side3(s_side3), angle1(s_angle1), angle2(s_angle2), angle3(s_angle3)
     {
-        perimeter = count_perimeter();
-        square = count_square();
+        count_perimeter();
+        count_square();
     }
 
     void set_side(double s_side1, double s_side2, double s_side3);

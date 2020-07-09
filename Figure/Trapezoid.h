@@ -22,18 +22,17 @@ public:
     void set_angle_3(double s_angle_3) { angle_3=s_angle_3; }
     void set_angle_4(double s_angle_4) { angle_4=s_angle_4; }
 
-    double count_perimeter()
+    void count_perimeter()
     {
         perimeter = a+b+c+d;
-        return perimeter;
     }
-    double count_square()
+   void count_square()
     {
         square = pow((a - b), 2) + pow(c, 2) - pow(d, 2);
         square = square / (2 * (a - b));
         square = pow(c, 2) - pow(square, 2);
         square = ((a + b) / 2) * sqrt(square);
-        return square;
+
     }
 
     double get_perimeter() { return perimeter; }

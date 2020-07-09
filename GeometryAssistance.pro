@@ -1,11 +1,8 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    Demo \
     Figure \
-    Round \
-    Quadra \
-    LibraryTriangle \
+    Demo \
     FigureListShow \
     FiguresList \
     FigureCreation

@@ -17,16 +17,16 @@ public:
     void set_b(double s_b) { b=s_b; }
     void set_angle(double s_angle) { angle=s_angle; }
 
-    double count_perimeter()
+   void count_perimeter()
     {
         perimeter = 2*(a+b);
-        return perimeter;
+
     }
-    double count_square()
+   void count_square()
     {
         square = angle * M_PI / 180;
         square = sin(square);
-        return square;
+
     }
 
     double get_perimeter(){return perimeter;}

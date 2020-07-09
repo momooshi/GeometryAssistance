@@ -14,7 +14,7 @@ public:
 
     void edit_element();
     void save_to_file();
-    void del_element();
+    void del_element(int i) {figures.erase(figures.begin()+i); };
     void search_element();
     void add_element(Figure* figure) { figures.push_back(figure); }
     double get_size() { return figures.size(); }

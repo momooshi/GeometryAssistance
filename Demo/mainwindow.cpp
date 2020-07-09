@@ -9,7 +9,9 @@ MainWindow::MainWindow(QWidget *parent, FiguresList *t_list)
 
     ui->setupUi(this);
     window = new FigureChoice(this, list);
+
     connect (window, &FigureChoice::Return, this, &MainWindow::show);
+
  }
 
 MainWindow::~MainWindow()
@@ -29,5 +31,7 @@ void MainWindow::on_pushButton_3_clicked()
 {
     hide();
     show_list = new FigureShow(this, list);
+    connect(show_list, &FigureShow::Return,this, &MainWindow::show);
     show_list->show();
 }
+

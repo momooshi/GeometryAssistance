@@ -21,16 +21,15 @@ double Triangle::get_angle1() { return angle1; }
 double Triangle::get_angle2() { return angle2; }
 double Triangle::get_angle3() { return angle3; }
 
-double Triangle::count_square()
+void Triangle::count_square()
 {
     double half_perimeter;
     half_perimeter = (side1+side2+side3)/2;
     square=sqrt(half_perimeter*(half_perimeter-side1)*(half_perimeter-side2)*(half_perimeter-side3));
-    return square;
+
 }
 
-double Triangle::count_perimeter()
+void Triangle::count_perimeter()
 {
-    double s_perimeter=side1+side2+side3;
-    return s_perimeter;
+   perimeter=side1+side2+side3;
 }

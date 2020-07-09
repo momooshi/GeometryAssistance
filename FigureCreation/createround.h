@@ -2,7 +2,7 @@
 #define CREATEROUND_H
 
 #include <QMainWindow>
-#include "../Round/round.h"
+#include "../Figure/round.h"
 #include "../FiguresList/figureslist.h"
 #include "../FigureListShow/figureshow.h"
 #include <QDir>
@@ -27,6 +27,8 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_radline_textChanged(const QString &arg1);
+
+    void on_perimline_textChanged(const QString &arg1);
 
 private:
     Ui::CreateRound *ui;

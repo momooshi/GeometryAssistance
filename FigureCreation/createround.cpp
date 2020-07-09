@@ -24,13 +24,6 @@ void CreateRound::on_pushButton_clicked()
 
 void CreateRound::on_pushButton_2_clicked()
 {
-
-    /*file.open(QFile::WriteOnly | QFile::Text);
-    if (file.isOpen())
-    ui->statusbar->showMessage("Сохранено");
-    *text << (round->get_rad())<<" ";
-    *text << (round->get_perimeter());
-    file.close();*/
     list->add_element(round);
 }
 
@@ -38,10 +31,20 @@ void CreateRound::on_radline_textChanged(const QString &arg1)
 {
     double radius = arg1.toDouble();
     round->set_rad(radius);
-    double perimeter = round->count_perimeter();
-    double square = round->count_square();
+    double perimeter = round->get_perimeter();
+    double square = round->get_square();
 
     ui->label_3->setNum(perimeter);
     ui->round_square->setNum(square);
 }
 
+
+void CreateRound::on_perimline_textChanged(const QString &arg1)
+{
+    double perimeter = arg1.toDouble();
+    round->set_perimeter(perimeter);
+    double radius = round->get_rad();
+    double square = round->get_square();
+    ui->rad_2->setNum(radius);
+    ui->round_square->setNum(square);
+}
