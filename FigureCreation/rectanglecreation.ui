@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TriangleCreation</class>
- <widget class="QMainWindow" name="TriangleCreation">
+ <class>RectangleCreation</class>
+ <widget class="QMainWindow" name="RectangleCreation">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,8 +17,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>340</y>
+      <x>290</x>
+      <y>410</y>
       <width>297</width>
       <height>25</height>
      </rect>
@@ -47,82 +47,64 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>120</y>
-      <width>112</width>
-      <height>150</height>
+      <x>460</x>
+      <y>180</y>
+      <width>221</width>
+      <height>141</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label_10">
+        <widget class="QLabel" name="label_7">
          <property name="text">
           <string>Сторона А</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_11">
+        <widget class="QLabel" name="label_5">
          <property name="text">
           <string>Сторона В</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_12">
-         <property name="text">
-          <string>Сторона С</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_13">
-         <property name="text">
-          <string>Угол АВ</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>Угол ВС</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>Угол СА</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_16">
+        <widget class="QLabel" name="label_4">
          <property name="text">
           <string>Периметр</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_17">
+        <widget class="QLabel" name="label_6">
          <property name="text">
           <string>Площадь</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Угол</string>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="side_a">
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -131,33 +113,8 @@
          <property name="text">
           <string/>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="side_c">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="angle_a">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="angle_b">
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="angle_c">
-         <property name="text">
-          <string/>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -166,12 +123,28 @@
          <property name="text">
           <string/>
          </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="square_2">
+        <widget class="QLabel" name="square">
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>90</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -179,81 +152,41 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>120</y>
-      <width>198</width>
-      <height>154</height>
+      <x>80</x>
+      <y>180</y>
+      <width>281</width>
+      <height>141</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QLabel" name="rad">
-         <property name="text">
-          <string>Сторона A</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="perim">
-         <property name="text">
-          <string>Сторона B</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="square">
-         <property name="text">
-          <string>Сторона C</string>
-         </property>
-        </widget>
-       </item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>Угол AB</string>
+          <string>Сторона А</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>Угол BC</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Угол CA</string>
+          <string>Сторона В</string>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QLineEdit" name="lineEdit"/>
        </item>
        <item>
         <widget class="QLineEdit" name="lineEdit_2"/>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_3"/>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_4"/>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_5"/>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
        </item>
       </layout>
      </item>

@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "../FigureCreation/figurechoice.h"
+#include "figurechoice.h"
 #include <QMainWindow>
-//#include "../FigureListShow/figureshow.h"
+#include "figureshow.h"
 //#include "../FiguresList/figureslist.h"
 
 QT_BEGIN_NAMESPACE

@@ -10,10 +10,10 @@ class Figure
     Figure () { }
     virtual void count_perimeter() = 0;
     virtual void count_square () = 0;
-     virtual double  get_perimeter() = 0;
-     virtual double  get_square() = 0;
-      virtual QString get_name() = 0;
-   virtual ~Figure() { }
+    virtual double  get_perimeter() = 0;
+    virtual double  get_square() = 0;
+    virtual QString get_name() = 0;
+    virtual ~Figure() { }
 };
 
 #endif // FIGURE_H

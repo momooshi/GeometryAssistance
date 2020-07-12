@@ -20,14 +20,16 @@ SOURCES += \
     Parallelogram.cpp \
     Trapezoid.cpp \
     librarytriangle.cpp \
-    round.cpp
+    round.cpp \
+    Rrectangle.cpp
 
 HEADERS += \
     Parallelogram.h \
     Trapezoid.h \
     figure.h \
     librarytriangle.h \
-    round.h
+    round.h \
+    Rrectangle.h
 
 # Default rules for deployment.
 unix {

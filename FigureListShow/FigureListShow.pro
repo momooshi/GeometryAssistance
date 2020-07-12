@@ -17,12 +17,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    figureshow.cpp \
-    showround.cpp
+    showparallel.cpp \
+    showrectangle.cpp \
+    showround.cpp \
+    showtrapezoid.cpp \
+    showtriangle.cpp
 
 HEADERS += \
-    figureshow.h \
-    showround.h
+    showparallel.h \
+    showrectangle.h \
+    showround.h \
+    showtrapezoid.h \
+    showtriangle.h
 
 # Default rules for deployment.
 unix {
@@ -31,5 +37,8 @@ unix {
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
-    figureshow.ui \
-    showround.ui
+    showparallel.ui \
+    showrectangle.ui \
+    showround.ui \
+    showtrapezoid.ui \
+    showtriangle.ui

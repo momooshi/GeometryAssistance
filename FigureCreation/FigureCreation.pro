@@ -4,7 +4,6 @@ TEMPLATE = lib
 CONFIG += staticlib
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
-
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -18,14 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     createround.cpp \
-    figurechoice.cpp \
-    quadracreation.cpp \
+    parallelcreation.cpp \
+    rectanglecreation.cpp \
+    trapezoidcreation.cpp \
     trianglecreation.cpp
 
 HEADERS += \
     createround.h \
-    figurechoice.h \
-    quadracreation.h \
+    parallelcreation.h \
+    rectanglecreation.h \
+    trapezoidcreation.h \
     trianglecreation.h
 
 # Default rules for deployment.
@@ -36,6 +37,7 @@ unix {
 
 FORMS += \
     createround.ui \
-    figurechoice.ui \
-    quadracreation.ui \
+    parallelcreation.ui \
+    rectanglecreation.ui \
+    trapezoidcreation.ui \
     trianglecreation.ui

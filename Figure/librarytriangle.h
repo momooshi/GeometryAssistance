@@ -1,47 +1,45 @@
 #ifndef LIBRARYTRIANGLE_H
 #define LIBRARYTRIANGLE_H
 #include  "../Figure/figure.h "
-#include  <math.h>
+#include  <cmath>
 
 class Triangle : public Figure
 {
   private:
+
     double side1, side2, side3;
-    double angle1, angle2, angle3;
+    int angle1, angle2, angle3;
 
   public:
-    void count_perimeter();
+
+    void count_perimeter() { perimeter = side1 + side2 + side3;}
     void count_square();
+    void count_side1_sidesangle();
+    void count_angles();
 
+    void count_on_2angle_1side();
+    void count_on_1angle_2side();
+    int count_3angle_on_3side();
+    Triangle();
+    Triangle (double t_side1, double t_side2, double t_side3);
+    Triangle(double t_size1, double t_size2, int t_angle1);
+    void set_side1(double a);
+    void set_side2(double a);
+    void set_side3(double a);
+    void set_angle1(double b);
+    void set_angle2(double b);
+    void set_angle3(double b);
 
-    Triangle(double s_side1 = 0, double s_side2 = 0, double s_side3 = 0, double s_angle1 = 0, double s_angle2 = 0, double s_angle3 = 0):
-        side1(s_side1), side2(s_side2), side3(s_side3), angle1(s_angle1), angle2(s_angle2), angle3(s_angle3)
-    {
-        count_perimeter();
-        count_square();
-    }
-
-    void set_side(double s_side1, double s_side2, double s_side3);
-    void set_angle (double a_angle1, double a_angle2, double a_angle3);
-
-    double get_side1();
-    double get_side2();
-    double get_side3();
-    double get_angle1();
-    double get_angle2();
-    double get_angle3();
-
-    void set_side1(double s_side1) { side1 = s_side1; }
-    void set_side2(double s_side2) { side2 = s_side2; }
-    void set_side3(double s_side3) { side3 = s_side3; }
-    void set_angle1(double s_angle1) { angle1 = s_angle1; }
-    void set_angle2(double s_angle2) { angle2 = s_angle2; }
-    void set_angle3(double s_angle3) { angle3 = s_angle3; }
+    double get_side1() { return side1; }
+    double get_side2() { return side2; }
+    double get_side3() { return side3; }
+    int get_angle1() { return angle1; }
+    int get_angle2() { return angle2; }
+    int get_angle3() { return angle3; }
 
     double  get_perimeter(){ return perimeter; }
     double  get_square(){ return square; }
-
-    ~Triangle();
+     QString get_name() { return name; }
+    ~Triangle() {}
 };
-
 #endif // LIBRARYTRIANGLE_H

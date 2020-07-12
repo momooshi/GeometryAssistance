@@ -1,50 +1,46 @@
-#ifndef QUADRA_H
-#define QUADRA_H
+#ifndef TRAPEZOID_H
+#define TRAPEZOID_H
 
-#include <iostream>
 #include <math.h>
 #include "../Figure/figure.h"
 
 class Trapezoid : public Figure
 {
+    double side_a, side_b, side_c, side_d, angle_1, angle_2, angle_3, angle_4, height; //стороны, углы трапеции и высота
+
 public:
-    double a, b, c, d, angle_1, angle_2, angle_3, angle_4; //стороны и углы трапеции
 
+
+    void count_square();
+    void count_side() {side_a = sqrt(pow(height,2)+pow((side_d-side_b),2)/4); side_c = side_a;}
+    void count_height() { height = (2*square)/(side_b+side_d);}
+    void count_perimeter() { perimeter = side_a+side_b+side_c+side_d; }
+    void count_angles();
     Trapezoid();
-    ~Trapezoid();
+    Trapezoid(double t_side_a, double t_side_b, double t_side_c, double t_side_d);
 
-    void set_a(double s_a) { a=s_a; }
-    void set_b(double s_b) { b=s_b; }
-    void set_c(double s_c) { c=s_c; }
-    void set_d(double s_d) { d=s_d; }
-    void set_angle_1(double s_angle_1) { angle_1=s_angle_1; }
-    void set_angle_2(double s_angle_2) { angle_2=s_angle_2; }
-    void set_angle_3(double s_angle_3) { angle_3=s_angle_3; }
-    void set_angle_4(double s_angle_4) { angle_4=s_angle_4; }
+    ~Trapezoid() {}
 
-    void count_perimeter()
-    {
-        perimeter = a+b+c+d;
-    }
-   void count_square()
-    {
-        square = pow((a - b), 2) + pow(c, 2) - pow(d, 2);
-        square = square / (2 * (a - b));
-        square = pow(c, 2) - pow(square, 2);
-        square = ((a + b) / 2) * sqrt(square);
+    void set_side_a(double t_side_a);
+    void set_side_b(double t_side_b);
+    void set_side_c(double t_side_c);
+    void set_side_d(double t_side_d);
+    void set_angle_1(double t_angle_1);
+    void set_angle_2(double t_angle_2);
+    void set_height(double t_height);
 
-    }
-
+    double get_side_a() { return side_a; }
+    double get_side_b() {return side_b; }
+    double get_side_c() { return side_c; }
+    double get_side_d() { return side_d; }
     double get_perimeter() { return perimeter; }
     double get_square() { return square; }
-
     double get_angle_1() { return angle_1; }
     double get_angle_2() { return angle_2; }
     double get_angle_3() { return angle_3; }
     double get_angle_4() { return angle_4; }
-
-    void show();
-    void show_figure();
+    double get_height() { return height; }
+    QString get_name() { return name; }
 };
 
-#endif // QUADRA_H
+#endif // TRAPEZOID_H

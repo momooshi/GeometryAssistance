@@ -2,9 +2,10 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     Figure \
-    Demo \
     FigureListShow \
     FiguresList \
-    FigureCreation
+    FigureCreation \
+    Demo
+
 
     CONFIG+= ordered

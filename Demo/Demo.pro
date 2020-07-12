@@ -14,17 +14,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-LIBS += -L../FigureCreation/debug -lFigureCreation
-LIBS+= -L../FigureListShow/debug -lFigureListShow
-LIBS+= -L../FiguresList/debug -lFiguresList
+LIBS += -L../FigureCreation/release -lFigureCreation
+LIBS+= -L../FigureListShow/release -lFigureListShow
+LIBS+= -L../FiguresList/release -lFiguresList
 SOURCES += \
+    figurechoice.cpp \
+    figureshow.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    figurechoice.h \
+    figureshow.h \
     mainwindow.h
 
 FORMS += \
+    figurechoice.ui \
+    figureshow.ui \
     mainwindow.ui
 
 # Default rules for deployment.

@@ -4,9 +4,7 @@
 #include <QMainWindow>
 #include "../Figure/round.h"
 #include "../FiguresList/figureslist.h"
-#include "../FigureListShow/figureshow.h"
-#include <QDir>
-#include <QFile>
+
 namespace Ui {
 class CreateRound;
 }
@@ -26,15 +24,11 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void on_radline_textChanged(const QString &arg1);
-
-    void on_perimline_textChanged(const QString &arg1);
+    void on_pushButton_3_clicked();
 
 private:
     Ui::CreateRound *ui;
     Round *round;
-    QFile file;
-    QTextStream *text;
     FiguresList *list;
   };
 

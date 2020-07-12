@@ -17,7 +17,7 @@
    <widget class="QSplitter" name="splitter">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>190</x>
       <y>100</y>
       <width>221</width>
       <height>221</height>
@@ -63,11 +63,19 @@
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_7">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+      </font>
+     </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="mouseTracking">
       <bool>true</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
      </property>
      <property name="text">
       <string>Выход</string>

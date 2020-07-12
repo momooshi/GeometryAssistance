@@ -1,8 +1,10 @@
 #ifndef FIGURECHOICE_H
 #define FIGURECHOICE_H
-#include "createround.h"
-#include "trianglecreation.h"
-#include "quadracreation.h"
+#include "../FigureCreation/createround.h"
+#include "../FigureCreation/trianglecreation.h"
+#include "../FigureCreation/rectanglecreation.h"
+#include "../FigureCreation/parallelcreation.h"
+#include "../FigureCreation/trapezoidcreation.h"
 #include <QDialog>
 
 namespace Ui {
@@ -36,7 +38,9 @@ private:
     Ui::FigureChoice *ui;
     CreateRound *creationwindowr;
     TriangleCreation *creationwindow_t;
-    QuadraCreation *creationwindow_q;
+    RectangleCreation *creationwindow_q;
+    ParallelCreation *creationwindow_qp;
+    TrapezoidCreation *creationwindow_qt;
     FiguresList *list;
 };
 
