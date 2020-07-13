@@ -20,7 +20,7 @@ Triangle::Triangle()
 Triangle::Triangle (double t_side1, double t_side2, double t_side3): side1(t_side1), side2(t_side2), side3(t_side3)
 {
     name="Треугольник";
-    count_3angle_on_3side();
+    count_angles();
     count_square();
     count_perimeter();
 }
@@ -57,25 +57,6 @@ void Triangle::count_on_1angle_2side()
 
 }
 
-int Triangle::count_3angle_on_3side()
-{
-    if (square)
-    {
-        angle1 = asin((2*square/(side1*side2)))*180.0/M_PI;
-        angle2 = asin((2*square/(side2*side3)))*180.0/M_PI;
-        angle3 = asin((2*square/(side3*side1)))*180.0/M_PI;
-        return 0;
-    }
-    else if ((side1<(side2+side3))||(side2<(side1+side3))||(side3<(side1+side2)))
-    {
-        angle1=acos((side2*side2+side3*side3-side1*side1)/2*side2*side3)*180/M_PI;
-        angle2=acos((side1*side1+side3*side3-side2*side2)/2*side1*side3)*180/M_PI;
-        angle3=180-(angle1+angle2);
-        return 0;
-    }
-    else {return -1;}
-
- }
 void Triangle::set_side1(double a)
 {
    side1=a;

@@ -35,3 +35,9 @@ void MainWindow::on_pushButton_3_clicked()
     show_list->show();
 }
 
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    list->save_to_file();
+    ui->statusbar->showMessage("Сохранено");
+}

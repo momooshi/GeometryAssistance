@@ -19,7 +19,6 @@ class Triangle : public Figure
 
     void count_on_2angle_1side();
     void count_on_1angle_2side();
-    int count_3angle_on_3side();
     Triangle();
     Triangle (double t_side1, double t_side2, double t_side3);
     Triangle(double t_size1, double t_size2, int t_angle1);

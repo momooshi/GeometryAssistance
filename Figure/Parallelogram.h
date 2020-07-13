@@ -11,9 +11,9 @@ private:
 public:
     void count_perimeter() { perimeter = 2*(side_a+side_b); }
     void count_square() { square = sin(angle_1 * M_PI / 180); }
-    void count_height() { height = (side_a * sin(angle_1)); }
-    void count_angle_1() { angle_1 = (int) (asin(height / side_a) * 180) / M_PI; }
-    void count_angle_2() { angle_2 = (int) (360 - 2 * angle_1) / 2; }
+    void count_height() { height = (side_a * sin(angle_1 * M_PI / 180)); }
+    void count_angle_1() { angle_1 = (asin(height / side_a) * 180) / M_PI; }
+    void count_angle_2() { angle_2 = 180 - angle_1; }
 
     void set_side_a (double t_side_a) { side_a = t_side_a; }
     void set_side_b (double t_side_b) { side_b = t_side_b; }

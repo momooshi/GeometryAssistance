@@ -37,24 +37,26 @@ void TriangleCreation::on_pushButton_3_clicked()
 
 if ((!angle_a)&&(!angle_b)&&(!angle_c))
   {
-    if (((side_a+side_b)>=side_c)||((side_b+side_c)>=side_a)||((side_c+side_b)>=side_a))
+    if (((side_a+side_b)<side_c)||((side_b+side_c)<side_a)||((side_c+side_b)<side_a))
         ui->statusbar->showMessage("Треугольника не существует");
+    else
+    {
+        tri->set_side1(side_a);
+        tri->set_side2(side_b);
+        tri->set_side3(side_c);
+        tri->count_square();
+        tri->count_perimeter();
+        tri->count_angles();
 
-    tri->set_side1(side_a);
-    tri->set_side2(side_b);
-    tri->set_side3(side_c);
-    tri->count_square();
-    tri->count_perimeter();
-    tri->count_angles();
-
-    ui->side_a->setNum(side_a);
-    ui->side_b->setNum(side_b);
-    ui->side_c->setNum(side_c);
-    ui->angle_a->setNum(tri->get_angle1());
-    ui->angle_b->setNum(tri->get_angle2());
-    ui->angle_c->setNum(tri->get_angle3());
-    ui->perimeter->setNum(tri->get_perimeter());
-    ui->square_2->setNum(tri->get_square());
+        ui->side_a->setNum(side_a);
+        ui->side_b->setNum(side_b);
+        ui->side_c->setNum(side_c);
+        ui->angle_a->setNum(tri->get_angle1());
+        ui->angle_b->setNum(tri->get_angle2());
+        ui->angle_c->setNum(tri->get_angle3());
+        ui->perimeter->setNum(tri->get_perimeter());
+        ui->square_2->setNum(tri->get_square());
+    }
    } else
     if ((!side_c)&&(!angle_b)&&(!angle_c))
     {
