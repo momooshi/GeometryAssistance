@@ -10,7 +10,10 @@ void FiguresList::save_to_file()
     QFile base ("figures.txt");
     QTextStream in (&base);
     in.setCodec("UTF-8");
-    if (base.open(QIODevice::WriteOnly | QIODevice::Text))
+
+    base.open(QIODevice::WriteOnly | QIODevice::Text);
+    in<<"----------------------------------------------------------"<<Qt::endl;
+    if (base.isOpen())
     {
         QString name;
         for (int i = 0; i < figures.size(); i++)
