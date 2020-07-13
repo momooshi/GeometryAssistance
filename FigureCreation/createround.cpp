@@ -23,6 +23,7 @@ void CreateRound::on_pushButton_clicked()
 void CreateRound::on_pushButton_2_clicked()
 {
     list->add_element(round);
+    ui->statusbar->showMessage("Сохранено");
 }
 
 void CreateRound::on_pushButton_3_clicked()

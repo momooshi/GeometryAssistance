@@ -90,6 +90,7 @@ void TrapezoidCreation::on_pushButton_3_clicked()
 void TrapezoidCreation::on_pushButton_clicked()
 {
     list->add_element(trape);
+    ui->statusbar->showMessage("Сохранено");
 }
 
 void TrapezoidCreation::on_pushButton_2_clicked()

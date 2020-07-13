@@ -33,6 +33,7 @@ void ParallelCreation::setFields(double side_a, double side_b, double angle_a, d
 void ParallelCreation::on_pushButton_clicked()
 {
     list->add_element(par);
+    ui->statusbar->showMessage("Сохранено");
 }
 
 void ParallelCreation::on_pushButton_3_clicked()

@@ -23,6 +23,7 @@ void RectangleCreation::on_pushButton_clicked()
 void RectangleCreation::on_pushButton_2_clicked()
 {
    list->add_element(rectangle);
+   ui->statusbar->showMessage("Сохранено");
 }
 
 void RectangleCreation::on_pushButton_3_clicked()
