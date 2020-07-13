@@ -2,7 +2,9 @@
 #define ROUND_H
 #include "../Figure/figure.h"
 #include <math.h>
+
 #include<iostream>
+
 #include <QTextStream>
 class Round : public Figure
 {
@@ -11,15 +13,6 @@ class Round : public Figure
 
 public:
 
-    double count_perimeter()
-    {
-        return (2 * atan(1) * 4 * rad);
-    }
-
-    double count_square()
-    {
-        return (atan(1) * 4 * rad * rad);
-    }
 
     double count_rad()
     {
@@ -50,6 +43,7 @@ public:
     Round(double rad);
     ~Round() {}
 };
+
 
 #endif // ROUND_H
 
