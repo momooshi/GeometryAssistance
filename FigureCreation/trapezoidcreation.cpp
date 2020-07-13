@@ -53,7 +53,7 @@ void TrapezoidCreation::on_pushButton_3_clicked()
         trape->count_angles();
 
         side_a = trape->get_side_a();
-        side_b = trape->get_side_d();
+        side_c = trape->get_side_c();
         angle_a = trape->get_angle_1();
         angle_b = trape->get_angle_2();
         angle_c = trape->get_angle_3();
