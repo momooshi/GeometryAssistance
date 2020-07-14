@@ -1,9 +1,7 @@
 #ifndef QUADRA_H
 #define QUADRA_H
-
-#include <iostream>
 #include <math.h>
-#include "../Figure/figure.h"
+#include "figure.h"
 
 class Rrectangle:public Figure
 {
@@ -14,9 +12,12 @@ class Rrectangle:public Figure
   public:
     void count_perimeter() { perimeter = width*2+length*2; }
     void count_square() { square = width*length; }
-    
-    void set_width(double t_width) { width = t_width; }
-    void set_length(double t_length) { length = t_length; }
+
+    Rrectangle();
+    Rrectangle (double t_width, double t_length);
+
+    void set_width(double t_width);
+    void set_length(double t_length);
     
     double get_width() { return width; }
     double get_length() { return length; }
@@ -25,14 +26,8 @@ class Rrectangle:public Figure
     int get_angle() { return angle; }
 
     QString get_name() { return name; }
-    Rrectangle(): width (0), length (0)
-    {}
-    Rrectangle (double t_width, double t_length): width (t_width), length (t_length)
-    {
-     count_perimeter();
-     count_square ();
-    }    
-    ~Rrectangle();
+
+    ~Rrectangle() {}
     };
 
 #endif // RECTANGLE_H
