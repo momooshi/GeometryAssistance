@@ -2,9 +2,9 @@
 #include "ui_createround.h"
 
 CreateRound::CreateRound(QWidget *parent, FiguresList *t_list) :
-    QMainWindow(parent), list(t_list),
+    QMainWindow(parent),
     ui(new Ui::CreateRound)
-{
+{   list = t_list;
     ui->setupUi(this);
     round = new Round;
 }

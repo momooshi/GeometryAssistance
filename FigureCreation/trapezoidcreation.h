@@ -27,9 +27,9 @@ private slots:
     void on_pushButton_2_clicked();
 
 private:
-    Ui::TrapezoidCreation *ui;
     Trapezoid *trape;
     FiguresList *list;
+    Ui::TrapezoidCreation *ui;
 };
 
 #endif // TRAPEZOIDCREATION_H

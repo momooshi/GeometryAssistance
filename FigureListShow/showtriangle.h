@@ -16,8 +16,8 @@ public:
     ~ShowTriangle();
 
 private:
-    Ui::ShowTriangle *ui;
     Triangle *tri;
+    Ui::ShowTriangle *ui;
 };
 
 #endif // SHOWTRIANGLE_H

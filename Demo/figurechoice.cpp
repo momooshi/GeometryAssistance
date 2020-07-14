@@ -2,9 +2,10 @@
 #include "ui_figurechoice.h"
 
 FigureChoice::FigureChoice(QWidget *parent, FiguresList *t_list) :
-    QDialog(parent), list(t_list),
+    QDialog(parent),
     ui(new Ui::FigureChoice)
 {
+    list = t_list;
     ui->setupUi(this);
     creationwindowr = new CreateRound(this, list);
     creationwindow_t = new TriangleCreation(this, list);

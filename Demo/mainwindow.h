@@ -27,9 +27,9 @@ private slots:
     void on_pushButton_4_clicked();
 
 private:
-    Ui::MainWindow *ui;
     FigureChoice *window;
     FigureShow *show_list;
     FiguresList *list;
+    Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H

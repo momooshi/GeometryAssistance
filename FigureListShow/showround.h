@@ -15,8 +15,8 @@ public:
     explicit ShowRound(QWidget *parent = nullptr, Round *t_r = nullptr);
     ~ShowRound();
 private:
-    Ui::ShowRound *ui;
     Round *r;
+    Ui::ShowRound *ui;
 };
 
 #endif // SHOWROUND_H

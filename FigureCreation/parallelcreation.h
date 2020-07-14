@@ -25,9 +25,9 @@ private slots:
     void on_pushButton_3_clicked();
 
 private:
-    Ui::ParallelCreation *ui;
     Parallelogram *par;
     FiguresList *list;
+    Ui::ParallelCreation *ui;
 };
 
 #endif // PARALLELCREATION_H

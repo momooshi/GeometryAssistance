@@ -27,9 +27,9 @@ private slots:
     void on_pushButton_3_clicked();
 
 private:
-    Ui::CreateRound *ui;
     Round *round;
     FiguresList *list;
+    Ui::CreateRound *ui;
   };
 
 #endif // CREATEROUND_H

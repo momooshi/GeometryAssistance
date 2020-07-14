@@ -29,13 +29,13 @@ private slots:
     void on_pushButton_3_clicked();
 
 private:
-    Ui::FigureShow *ui;
     FiguresList *list;
     ShowRound *window_r;
     ShowRectangle *window_qr;
     ShowParallel *window_qp;
     ShowTrapezoid *window_qt;
     ShowTriangle *window_t;
+    Ui::FigureShow *ui;
 };
 
 #endif // FIGURESHOW_H

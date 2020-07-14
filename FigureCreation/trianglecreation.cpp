@@ -2,9 +2,9 @@
 #include "ui_trianglecreation.h"
 
 TriangleCreation::TriangleCreation(QWidget *parent, FiguresList *t_list) :
-    QMainWindow(parent), list(t_list),
+    QMainWindow(parent),
     ui(new Ui::TriangleCreation)
-{
+{   list = t_list;
     ui->setupUi(this);
     tri = new Triangle;
 }

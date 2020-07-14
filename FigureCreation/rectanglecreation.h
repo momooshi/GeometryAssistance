@@ -29,10 +29,9 @@ private slots:
     void on_pushButton_3_clicked();
 
 private:
-
-    Ui::RectangleCreation *ui;
     Rrectangle *rectangle;
     FiguresList *list;
+    Ui::RectangleCreation *ui;
 };
 
 #endif // RECTANGLECREATION_H

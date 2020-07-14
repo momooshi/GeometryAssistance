@@ -16,8 +16,8 @@ public:
     ~ShowRectangle();
 
 private:
-    Ui::ShowRectangle *ui;
     Rrectangle *rec;
+    Ui::ShowRectangle *ui;
 };
 
 #endif // SHOWRECTANGLE_H

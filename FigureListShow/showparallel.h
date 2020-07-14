@@ -16,8 +16,8 @@ public:
     ~ShowParallel();
 
 private:
-    Ui::ShowParallel *ui;
-    Parallelogram *par;
+     Parallelogram *par;
+     Ui::ShowParallel *ui;
 };
 
 #endif // SHOWPARALLEL_H

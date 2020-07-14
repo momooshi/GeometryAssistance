@@ -16,8 +16,8 @@ public:
     ~ShowTrapezoid();
 
 private:
-    Ui::ShowTrapezoid *ui;
     Trapezoid *trape;
+    Ui::ShowTrapezoid *ui;
 };
 
 #endif // SHOWTRAPEZOID_H

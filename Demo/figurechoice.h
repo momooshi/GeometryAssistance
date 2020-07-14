@@ -35,13 +35,13 @@ private slots:
     void on_pushButton_6_clicked();
 
 private:
-    Ui::FigureChoice *ui;
     CreateRound *creationwindowr;
     TriangleCreation *creationwindow_t;
     RectangleCreation *creationwindow_q;
     ParallelCreation *creationwindow_qp;
     TrapezoidCreation *creationwindow_qt;
     FiguresList *list;
+    Ui::FigureChoice *ui;
 };
 
 #endif // FIGURECHOICE_H

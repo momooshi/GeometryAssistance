@@ -3,10 +3,10 @@
 
 
 MainWindow::MainWindow(QWidget *parent, FiguresList *t_list)
-    : QMainWindow(parent), list (t_list)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+     ui(new Ui::MainWindow)
 {
-
+    list = t_list;
     ui->setupUi(this);
     window = new FigureChoice(this, list);
 
