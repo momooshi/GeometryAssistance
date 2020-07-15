@@ -57,34 +57,11 @@ void Triangle::count_on_1angle_2side()
 
 }
 
-void Triangle::set_side1(double a)
-{
-   side1=a;
-}
-
-void Triangle::set_side2(double a)
-{
-   side2=a;
-}
-
-void Triangle::set_side3(double a)
-{
-   side3=a;
- }
-
-void Triangle::set_angle1(double b)
-{
-   angle1=b;
-}
-
-void Triangle::set_angle2(double b)
-{
-   angle2=b;
-}
-
-void Triangle::set_angle3(double b)
-{
-   angle3=b;
-}
+void Triangle::set_side1(double a) { side1=a; }
+void Triangle::set_side2(double a) { side2=a; }
+void Triangle::set_side3(double a) { side3=a; }
+void Triangle::set_angle1(double b) { angle1=b; }
+void Triangle::set_angle2(double b) { angle2=b; }
+void Triangle::set_angle3(double b) { angle3=b; }
 
 
