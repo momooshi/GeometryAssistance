@@ -2,15 +2,17 @@
 #include "ui_mainwindow.h"
 
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+MainWindow::MainWindow(QWidget *parent, FiguresList *t_list)
+    : QMainWindow(parent), list (t_list)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
-    window = new FigureChoice(this);
+    window = new FigureChoice(this, list);
     connect (window, &FigureChoice::Return, this, &MainWindow::show);
 
     show_list = new FigureShow(this);
+
  }
 
 MainWindow::~MainWindow()
@@ -29,5 +31,7 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
     hide();
+    show_list = new FigureShow(this, list);
+
     show_list->show();
 }
