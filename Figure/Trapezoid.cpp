@@ -20,6 +20,7 @@ void Trapezoid::count_angles()
 Trapezoid::Trapezoid(double t_side_a, double t_side_b, double t_side_c, double t_side_d):
     side_a(t_side_a), side_b(t_side_b), side_c(t_side_c), side_d(t_side_d)
 {
+    name = "Трапеция";
     count_height();
     count_perimeter();
     count_square();

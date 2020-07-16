@@ -34,14 +34,12 @@ void TrapezoidCreation::on_pushButton_3_clicked()
 {
     double side_a = (ui->edit_side_a->text()).toDouble();
     double side_b = (ui->edit_side_b->text()).toDouble();
-    double angle_a = (ui->edit_angle_a->text()).toDouble();
-    double angle_b = (ui->edit_angle_b->text()).toDouble();
     double side_c = (ui->edit_side_c->text()).toDouble();
     double side_d = (ui->edit_side_d->text()).toDouble();
     double height = (ui->edit_height->text()).toDouble();
-    double perimeter, square, angle_c, angle_d;
+    double perimeter, square, angle_a, angle_b, angle_c, angle_d;
 
-    if ((!side_a)&&(!side_c)&&(!angle_a)&&(!angle_b))
+    if ((!side_a)&&(!side_c))
    {
         trape->set_side_b(side_b);
         trape->set_side_d(side_d);
@@ -64,7 +62,7 @@ void TrapezoidCreation::on_pushButton_3_clicked()
 
         setFields (side_a, side_b, side_c, side_d, angle_a, angle_b, angle_c, angle_d, height, perimeter, square);
   }
-    else if ((!height)&&(!angle_a)&&(!angle_b))
+    else if (!height)
     {
         trape->set_side_a(side_a);
         trape->set_side_b(side_b);
@@ -84,7 +82,9 @@ void TrapezoidCreation::on_pushButton_3_clicked()
         angle_c = trape->get_angle_3();
         angle_d = trape->get_angle_4();
 
-        setFields (side_a, side_b, side_c, side_d, angle_a, angle_b, angle_c, angle_d, height, perimeter, square);
+        if (angle_a+angle_b!=180) { ui->statusbar->showMessage("Нельзя расчитать"); }
+        else
+        { setFields (side_a, side_b, side_c, side_d, angle_a, angle_b, angle_c, angle_d, height, perimeter, square); }
     }
     else ui->statusbar->showMessage("Нельзя расчитать");
 }

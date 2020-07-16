@@ -63,15 +63,15 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="edit_height"/>
+     </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Сторона А</string>
        </property>
       </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="edit_side_a"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
@@ -83,15 +83,11 @@
      <item row="1" column="1">
       <widget class="QLineEdit" name="edit_side_b"/>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Сторона С</string>
-       </property>
-      </widget>
-     </item>
      <item row="2" column="1">
       <widget class="QLineEdit" name="edit_side_c"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="edit_side_a"/>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="label_4">
@@ -100,38 +96,22 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="edit_side_d"/>
-     </item>
      <item row="4" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>Угол А (острый)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QLineEdit" name="edit_angle_a"/>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>Угол В (острый)</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QLineEdit" name="edit_angle_b"/>
-     </item>
-     <item row="6" column="0">
       <widget class="QLabel" name="label_7">
        <property name="text">
         <string>Высота</string>
        </property>
       </widget>
      </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="edit_height"/>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="edit_side_d"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Сторона С</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
