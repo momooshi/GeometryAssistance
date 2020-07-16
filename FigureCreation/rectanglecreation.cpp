@@ -6,6 +6,7 @@ RectangleCreation::RectangleCreation(QWidget *parent, FiguresList *t_list) :
     ui(new Ui::RectangleCreation)
 {
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     rectangle = new Rrectangle;
 }
 

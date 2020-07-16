@@ -6,6 +6,7 @@ ShowTriangle::ShowTriangle(QWidget *parent, Triangle *t_tri) :
     ui(new Ui::ShowTriangle)
 {
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     double side_a = tri->get_side1();
     double side_b = tri->get_side2();
     double side_c = tri->get_side3();

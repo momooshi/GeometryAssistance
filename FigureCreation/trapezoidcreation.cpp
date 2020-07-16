@@ -6,6 +6,7 @@ TrapezoidCreation::TrapezoidCreation(QWidget *parent, FiguresList *t_list) :
     ui(new Ui::TrapezoidCreation)
 {
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     trape = new Trapezoid;
 }
 
@@ -85,6 +86,7 @@ void TrapezoidCreation::on_pushButton_3_clicked()
 
         setFields (side_a, side_b, side_c, side_d, angle_a, angle_b, angle_c, angle_d, height, perimeter, square);
     }
+    else ui->statusbar->showMessage("Нельзя расчитать");
 }
 
 void TrapezoidCreation::on_pushButton_clicked()

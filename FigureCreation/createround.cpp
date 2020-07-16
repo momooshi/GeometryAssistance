@@ -4,8 +4,10 @@
 CreateRound::CreateRound(QWidget *parent, FiguresList *t_list) :
     QMainWindow(parent),
     ui(new Ui::CreateRound)
-{   list = t_list;
+{
+    list = t_list;
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     round = new Round;
 }
 

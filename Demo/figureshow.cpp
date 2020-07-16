@@ -7,7 +7,7 @@ FigureShow::FigureShow(QWidget *parent, FiguresList *t_list) :
 {
     list = t_list;
     ui->setupUi(this);
-
+    setWindowTitle("GeometryAssistance");
     for (int i=0; i<list->get_size(); i++)
     {
         Figure* a = list->get_element(i);
@@ -26,7 +26,8 @@ void FigureShow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
     QString c = item->text();
 
     if (c=="Окружность")
-    {   int index = ui->listWidget->currentRow();
+    {
+        int index = ui->listWidget->currentRow();
         Round *r = dynamic_cast<Round*>(list->get_element(index));
         window_r = new ShowRound(this, r);
         window_r->show();

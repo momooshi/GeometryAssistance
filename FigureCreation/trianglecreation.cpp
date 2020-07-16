@@ -6,6 +6,7 @@ TriangleCreation::TriangleCreation(QWidget *parent, FiguresList *t_list) :
     ui(new Ui::TriangleCreation)
 {   list = t_list;
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     tri = new Triangle;
 }
 
@@ -30,7 +31,7 @@ void TriangleCreation::on_pushButton_3_clicked()
 {
     double side_a = (ui->lineEdit->text()).toDouble();
     double side_b = (ui->lineEdit_2->text()).toDouble();
-     double side_c = (ui->lineEdit_3->text()).toDouble();
+    double side_c = (ui->lineEdit_3->text()).toDouble();
     double angle_a = (ui->lineEdit_4->text()).toDouble();
     double angle_b = (ui->lineEdit_5->text()).toDouble();
     double angle_c = (ui->lineEdit_6->text()).toDouble();
@@ -57,8 +58,8 @@ if ((!angle_a)&&(!angle_b)&&(!angle_c))
         ui->perimeter->setNum(tri->get_perimeter());
         ui->square_2->setNum(tri->get_square());
     }
-   } else
-    if ((!side_c)&&(!angle_b)&&(!angle_c))
+   }
+ else if ((!side_c)&&(!angle_b)&&(!angle_c))
     {
       tri->set_side1(side_a);
       tri->set_side2(side_b);
@@ -95,10 +96,6 @@ if ((!angle_a)&&(!angle_b)&&(!angle_c))
       ui->perimeter->setNum(tri->get_perimeter());
       ui->square_2->setNum(tri->get_square());
   }
+  else ui->statusbar->showMessage("Нельзя расчитать");
 }
 
-void TriangleCreation::on_lineEdit_textChanged(const QString &arg1)
-{
-    double side_a = arg1.toDouble();
-    tri->set_side1(side_a);
-}

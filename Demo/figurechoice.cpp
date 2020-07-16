@@ -7,6 +7,7 @@ FigureChoice::FigureChoice(QWidget *parent, FiguresList *t_list) :
 {
     list = t_list;
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     creationwindowr = new CreateRound(this, list);
     creationwindow_t = new TriangleCreation(this, list);
     creationwindow_q = new RectangleCreation(this, list);

@@ -6,6 +6,7 @@ ShowTrapezoid::ShowTrapezoid(QWidget *parent, Trapezoid *t_trape) :
     ui(new Ui::ShowTrapezoid)
 {
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     double side_a = trape->get_side_a();
     double side_b = trape->get_side_b();
     double side_c = trape->get_side_c();

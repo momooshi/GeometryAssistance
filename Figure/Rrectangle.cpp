@@ -6,7 +6,8 @@ Rrectangle::Rrectangle(): width (0), length (0)
   square = 0;
 }
 
-Rrectangle::Rrectangle (double t_width, double t_length): width (t_width), length (t_length)
+Rrectangle::Rrectangle (double t_width, double t_length):
+    width (t_width), length (t_length)
 {
   name = "Прямоугольник";
   count_perimeter();

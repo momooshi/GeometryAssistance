@@ -6,18 +6,16 @@ void Triangle::count_square()
     square = sqrt(abs(hp*(hp-side1)*(hp-side2)*(hp-side3)));
 }
 
-Triangle::Triangle()
+Triangle::Triangle():
+    side1(0), side2(0), side3(0), angle1(0), angle2(0), angle3(0)
 {
     name = "Треугольник";
-    side1=0;
-    side2=0;
-    side3=0;
-    angle1=0;
-    angle2=0;
-    angle3=0;
+    square = 0;
+    perimeter = 0;
 }
 
-Triangle::Triangle (double t_side1, double t_side2, double t_side3): side1(t_side1), side2(t_side2), side3(t_side3)
+Triangle::Triangle (double t_side1, double t_side2, double t_side3):
+    side1(t_side1), side2(t_side2), side3(t_side3)
 {
     name="Треугольник";
     count_angles();
@@ -25,7 +23,8 @@ Triangle::Triangle (double t_side1, double t_side2, double t_side3): side1(t_sid
     count_perimeter();
 }
 
-Triangle::Triangle(double t_side1, double t_side2, int t_angle1) : side1(t_side1), side2(t_side2), angle1(t_angle1)
+Triangle::Triangle(double t_side1, double t_side2, int t_angle1) :
+    side1(t_side1), side2(t_side2), angle1(t_angle1)
 {
     count_on_1angle_2side();
     count_perimeter();
@@ -38,7 +37,8 @@ void Triangle::count_side1_sidesangle()
 }
 
 void Triangle::count_angles()
-{   angle1 = acos((side1*side1+side2*side2-side3*side3)/(2*side1*side2))*180.0/M_PI;
+{
+    angle1 = acos((side1*side1+side2*side2-side3*side3)/(2*side1*side2))*180.0/M_PI;
     angle2 = acos((side2*side2+side3*side3-side1*side1)/(2*side2*side3))*180.0/M_PI;
     angle3 = acos((side1*side1+side3*side3-side2*side2)/(2*side1*side3))*180.0/M_PI;
 }

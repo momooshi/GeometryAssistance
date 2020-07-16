@@ -7,10 +7,9 @@ Round::Round(double s_rad): rad (s_rad)
     count_perimeter();
 }
 
-Round::Round()
+Round::Round(): rad(0)
 {
     name = "Окружность";
     perimeter = 0.0;
     square = 0.0;
-    rad = 0.0;
 }

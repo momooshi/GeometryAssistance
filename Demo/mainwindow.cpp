@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent, FiguresList *t_list)
 {
     list = t_list;
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     window = new FigureChoice(this, list);
 
     connect (window, &FigureChoice::Return, this, &MainWindow::show);
@@ -23,7 +24,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_2_clicked()
 {
     hide();
-
     window->show();
 }
 

@@ -6,6 +6,7 @@ ShowParallel::ShowParallel(QWidget *parent, Parallelogram *t_par) :
     ui(new Ui::ShowParallel)
 {
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     double side_a = par->get_side_a();
     double side_b = par->get_side_b();
     double angle_1 = par->get_angle_1();

@@ -6,16 +6,18 @@
 
 class Trapezoid : public Figure
 {
-    double side_a, side_b, side_c, side_d, angle_1, angle_2, angle_3, angle_4, height; //стороны, углы трапеции и высота
+private:
+
+    double side_a, side_b, side_c, side_d, angle_1, angle_2, angle_3, angle_4, height;
 
 public:
-
 
     void count_square();
     void count_side() {side_a = sqrt(pow(height,2)+pow((side_d-side_b),2)/4); side_c = side_a;}
     void count_height() { height = (2*square)/(side_b+side_d);}
     void count_perimeter() { perimeter = side_a+side_b+side_c+side_d; }
     void count_angles();
+
     Trapezoid();
     Trapezoid(double t_side_a, double t_side_b, double t_side_c, double t_side_d);
 

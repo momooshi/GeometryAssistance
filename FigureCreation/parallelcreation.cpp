@@ -6,6 +6,7 @@ ParallelCreation::ParallelCreation(QWidget *parent, FiguresList *t_list) :
     ui(new Ui::ParallelCreation)
 {
     ui->setupUi(this);
+    setWindowTitle("GeometryAssistance");
     par = new Parallelogram;
 }
 
